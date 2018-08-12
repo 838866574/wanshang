@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>团队成员</title>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_765071_sc6yifk44xc.css">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/swiper.jquery.min.js"></script>
+		<script src="js/public.js"></script>
+		
+	</head>
+	<body>
+		<div class="header">
+			<a href="index.html"><img class="logo" src="img/page-1.png" /></a>
+			<ul class="nav">
+				<li id="showDNav"><a href="#">万商天勤</a></li>
+				<li><a href="businessField.html">业务领域</a></li>
+				<li><a href="teamSearch.html">团队成员</a></li>
+				<li><a href="#">V&amp;T 联盟</a></li>
+				<li><a href="newsList.html">新闻动态</a></li>
+				<li><a href="publication.html">出版物</a></li>
+				<li><a href="recruit.html">加入我们</a></li>
+			</ul>
+			<div class="hRight">
+				<span class=""><a>中文</a>|<a>EN</a></span>
+				<a href="#" id="searchShow" class="search middle iconfont icon-search"></a>
+				<a href="#" id="phoneIcon" class="phone middle iconfont icon-smartphone-call"></a>
+				<div id="erw" class="erw"><img src="img/erwie.jpg" /></div>
+			</div>
+			<!--万商天勤下啦导航-->
+			<div class="wsDownNav">
+				<i class="xsj iconfont icon-arrow_homebanner"></i>
+				<ul>
+					<li><a href="aboutGyls.html">关于V&amp;T<i class="iconfont icon-sanjiaoright"></i></a></li>
+					<!--<li><a href="#">律管智汇<i class="iconfont icon-sanjiaoright"></i></a></li>-->
+					<!--<li><a href="#">万商智谷<i class="iconfont icon-sanjiaoright"></i></a></li>-->
+					<li><a href="aboutRyjx.html">荣誉奖项<i class="iconfont icon-sanjiaoright"></i></a></li>
+					<li><a href="aboutShzrTwo.html">公益活动<i class="iconfont icon-sanjiaoright"></i></a></li>
+					<li><a href="contactUs.html">联系我们<i class="iconfont icon-sanjiaoright"></i></a></li>
+				</ul>
+				<div id="rightFont" class="rightFont"></div>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="searchBox" style="display: none;">
+				<i class="iconfont searchIcon middle icon-search1"></i>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<input type="search" class="middle" value="" onkeypress="searchEnter()" placeholder="键入搜索关键字后按Enter" />
+				<i id="closeSearch" class="iconfont ca middle icon-close"></i>
+			</div>
+			
+		</div>
+		
+		
+		<div class="content">
+			
+			<div class="mbxNav"><a>首页</a>&gt;<a class="cur">团队成员</a></div>
+			<div class="tsSearch">
+				<ul class="fl">
+					<li>
+						<div class="tit">按姓名搜索</div>
+						<div><input type="text" value="" /></div>
+					</li>
+					<li>
+						<div class="tit">按办公地点搜索</div>
+						<div>
+							<select>
+								<option>11</option>
+								<option>22</option>
+								<option>33</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="tit">按专业领域搜索</div>
+						<div>
+							<select>
+								<option>11</option>
+								<option>22</option>
+								<option>33</option>
+							</select>
+						</div>
+					</li>
+				</ul>
+				<button class="searchBtn" type="button">搜索</button>
+			</div>
+			
+			
+			<div class="tsTit">按专业领域搜索</div>
+			<div class="tsItemBox">
+				<ul class="">
+					<li>
+						<a href="teamSearchList.html">
+							<div class="icon"><i class="iconfont icon-bars"></i></div>
+							<div class="text">公司及资本市场</div>
+						</a>
+					</li>
+					<li>
+						<a href="teamSearchList.html">
+							<div class="icon"><i class="iconfont icon-bankfinance"></i></div>
+							<div class="text">银行与金融</div>
+						</a>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-money"></i></div>
+						<div class="text">私募基金与投资并购</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-copyright"></i></div>
+						<div class="text">知识产权</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-bankfinance"></i></div>
+						<div class="text">国际业务</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-realeaste"></i></div>
+						<div class="text">房地产<br />建筑工程与基础设施</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-balance"></i></div>
+						<div class="text">争议解决</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-shield-"></i></div>
+						<div class="text">刑事风险和防范</div>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="tsTit">按办公地点搜索</div>
+			<div class="tsItemBox">
+				<ul class="">
+					<li>
+						<div class="icon"><i class="iconfont icon-beijing"></i></div>
+						<div class="text">北京</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-shanghai"></i></div>
+						<div class="text">上海</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-copyright"></i></div>
+						<div class="text">深圳</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-chengdu"></i></div>
+						<div class="text">成都</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-wuhan"></i></div>
+						<div class="text">武汉</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-machester"></i></div>
+						<div class="text">曼彻斯特</div>
+					</li>
+					<li>
+						<div class="icon"><i class="iconfont icon-madrid"></i></div>
+						<div class="text">马德里</div>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="footer">
+			<div class="nav">
+				<a href="#">法律声明</a>
+				<a href="#">免责声明</a>
+				<a href="#">使用条款</a>
+				<a href="#">网站地图</a>
+			</div>
+			<div>©2017 V&amp;T. All Rights Reserved. 京ICP备07010430号-1 京公网安备110105011164</div>
+			<ul class="menu">
+				<li><i class="iconfont icon-mobsite"></i></li>
+				<li><i class="iconfont icon-laywer_phone"></i></li>
+				<li><i class="iconfont icon-laywer_email"></i></li>
+				<li id="wxBtn" v-on:hover=""><i class="iconfont icon-wechat1"></i></li>
+			</ul>
+			<div id="wxBox" class="wxBox">
+				<img src="img/wechat-img-15.png" />
+				<i class="iconfont icon-sanjiaoshang sj"></i>
+			</div>
+		</div>
+		
+	</body>
+</html>

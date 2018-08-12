@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联系我们</title>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_765071_papbeeuu67c.css">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=gwDGtAoFKWyCMUCNSC9HynV6G3WVeuRB"></script>
+		<script src="js/swiper.jquery.min.js"></script>
+		<script src="js/public.js"></script>
+		
+		
+	</head>
+	<body>
+		<div class="header">
+			<a href="index.html"><img class="logo" src="img/page-1.png" /></a>
+			<ul class="nav">
+				<li id="showDNav"><a href="#">万商天勤</a></li>
+				<li><a href="businessField.html">业务领域</a></li>
+				<li><a href="teamSearch.html">团队成员</a></li>
+				<li><a href="#">V&amp;T 联盟</a></li>
+				<li><a href="newsList.html">新闻动态</a></li>
+				<li><a href="publication.html">出版物</a></li>
+				<li><a href="recruit.html">加入我们</a></li>
+			</ul>
+			<div class="hRight">
+				<span class=""><a>中文</a>|<a>EN</a></span>
+				<a href="#" id="searchShow" class="search middle iconfont icon-search"></a>
+				<a href="#" id="phoneIcon" class="phone middle iconfont icon-smartphone-call"></a>
+				<div id="erw" class="erw"><img src="img/erwie.jpg" /></div>
+			</div>
+			<!--万商天勤下啦导航-->
+			<div class="wsDownNav">
+				<i class="xsj iconfont icon-arrow_homebanner"></i>
+				<ul>
+					<li><a href="aboutGyls.html">关于V&amp;T<i class="iconfont icon-sanjiaoright"></i></a></li>
+					<!--<li><a href="#">律管智汇<i class="iconfont icon-sanjiaoright"></i></a></li>-->
+					<!--<li><a href="#">万商智谷<i class="iconfont icon-sanjiaoright"></i></a></li>-->
+					<li><a href="aboutRyjx.html">荣誉奖项<i class="iconfont icon-sanjiaoright"></i></a></li>
+					<li><a href="aboutShzrTwo.html">公益活动<i class="iconfont icon-sanjiaoright"></i></a></li>
+					<li><a href="contactUs.html">联系我们<i class="iconfont icon-sanjiaoright"></i></a></li>
+				</ul>
+				<div id="rightFont" class="rightFont"></div>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="searchBox" style="display: none;">
+				<i class="iconfont searchIcon middle icon-search1"></i>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<input type="search" class="middle" value="" onkeypress="searchEnter()" placeholder="键入搜索关键字后按Enter" />
+				<i id="closeSearch" class="iconfont ca middle icon-close"></i>
+			</div>
+			
+		</div>
+		
+		
+		
+			
+		<div class="mbxNav" style="border: none;"><a>首页</a>&gt;<a class="cur">联系我们</a></div>
+		
+		<!--map-->
+		<div class="banner_map">
+			<div style="width: 100%; height: 100%;" id="banner_map"></div>
+			<ul class="mapBtn">
+				<li onclick="changgeOverlay('bj')" class="act"><i class="iconfont icon-lawyer_office"></i>北京</li>
+				<li onclick="changgeOverlay('sz')"><i class="iconfont icon-lawyer_office"></i>深圳</li>
+				<li onclick="changgeOverlay('sh')"><i class="iconfont icon-lawyer_office"></i>上海</li>
+				<li onclick="changgeOverlay('cd')"><i class="iconfont icon-lawyer_office"></i>成都</li>
+			</ul>
+		</div>
+		<!--map-end-->
+		
+		<script type="text/javascript">
+			var map = new BMap.Map("banner_map"); 
+			map.addControl(new BMap.NavigationControl());
+			map.centerAndZoom(new BMap.Point(116.486048, 39.912741), 18); 
+			var point_bj = new BMap.Point(116.486048,39.912741);
+			var point_sz = new BMap.Point(114.070292,22.549871);        // 深圳    
+			var point_sh = new BMap.Point(121.512382,31.241039);        // 上海    
+			var point_cd = new BMap.Point(104.074896,30.558684);        // 成都    
+			
+			
+			var marker_bj = new BMap.Marker(point_bj);        // 创建标注
+			var marker_sz = new BMap.Marker(point_sz);        // 创建标注
+			var marker_sh = new BMap.Marker(point_sh);        // 创建标注
+			var marker_cd = new BMap.Marker(point_cd);        // 创建标注
+			map.addOverlay(marker_bj);
+			map.addOverlay(marker_sz);   
+			map.addOverlay(marker_sh);   
+			map.addOverlay(marker_cd);       
+			
+			//创建地图
+			
+			$(".mapBtn li").click(function(){
+				$(".mapBtn li").removeClass('act')
+				$(this).addClass('act')
+			});
+			
+			function changgeOverlay(city){
+				if(city == 'bj'){
+					map.panTo(point_bj)
+				}
+				if(city == 'sz'){
+					map.panTo(point_sz)
+				}
+				if(city == 'sh'){
+					map.panTo(point_sh)
+				}
+				if(city == 'cd'){
+					map.panTo(point_cd)
+				}
+			}
+			              // 将标注添加到地图中 
+			
+		</script>
+		
+		<div class="content ov">
+			<div class="bfOne_left">
+				<ul>
+					<li><a href="aboutGyls.html">关于V&amp;T</a></li>
+					<li><a href="aboutRyjx.html">荣誉奖项</a></li>
+					<li><a href="aboutShzrTwo.html">社会责任</a></li>
+					<li class="act"><a href="contactUs.html">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="bfOne_right ov">
+				<h3>联系我们</h3>
+				
+				<div style="line-height: 1.6; color: #9b9b9b; font-size: 20px; margin-top: 38px;">
+					您都可以用多种方式联系我们。我们会尽我们所能为您服务！
+				</div>
+				
+				<div class="aboutUsList">
+					<ul>
+						<li>
+							<img class="photo middle" src="img/beijing.jpg" />
+							<div class="nrk">
+								<div class="city">北京</div>
+								<div class="wz">
+									<i style="font-size: 30px;" class="iconfont icon-contact_location"></i>
+									<div class="ms">北京市朝阳区建国路86号佳兆业广场南塔T1座12层</div>
+								</div>
+								<div class="dh"><i class="iconfont icon-contact_phone"></i>86-10-82255588    </div>
+							</div>
+						</li>
+						<li style="margin-right: 0;">
+							<img class="photo middle" src="img/shen-zhen.jpg" />
+							<div class="nrk">
+								<div class="city">深圳</div>
+								<div class="wz">
+									<i style="font-size: 30px;" class="iconfont icon-contact_location"></i>
+									<div class="ms">深圳市福田区金田路4028号荣超经贸中心45层  </div>
+								</div>
+								<div class="dh"><i class="iconfont icon-contact_phone"></i>86-755-83026386  &nbsp;&nbsp;&nbsp;&nbsp;   83026389</div>
+							</div>
+						</li>
+						<li>
+							<img class="photo middle" src="img/shanghai.jpg" />
+							<div class="nrk">
+								<div class="city">北京</div>
+								<div class="wz">
+									<i style="font-size: 30px;" class="iconfont icon-contact_location"></i>
+									<div class="ms">上海市浦东新区世纪大道88号金茂大厦写字楼9层</div>
+								</div>
+								<div class="dh"><i class="iconfont icon-contact_phone"></i>86-21-50819091    </div>
+							</div>
+						</li>
+						<li style="margin-right: 0;">
+							<img class="photo middle" src="img/chengdu.jpg" />
+							<div class="nrk">
+								<div class="city">北京</div>
+								<div class="wz">
+									<i style="font-size: 30px;" class="iconfont icon-contact_location"></i>
+									<div class="ms">成都市高新区天府大道中段530号东方希望天祥广场A座43层</div>
+								</div>
+								<div class="dh"><i class="iconfont icon-contact_phone"></i>86-28-85973458    </div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		
+		<div class="footer">
+			<div class="nav">
+				<a href="#">法律声明</a>
+				<a href="#">免责声明</a>
+				<a href="#">使用条款</a>
+				<a href="#">网站地图</a>
+			</div>
+			<div>©2017 V&amp;T. All Rights Reserved. 京ICP备07010430号-1 京公网安备110105011164</div>
+			<ul class="menu">
+				<li><i class="iconfont icon-mobsite"></i></li>
+				<li><i class="iconfont icon-laywer_phone"></i></li>
+				<li><i class="iconfont icon-laywer_email"></i></li>
+				<li id="wxBtn"><i class="iconfont icon-wechat1"></i></li>
+			</ul>
+			<div id="wxBox" class="wxBox">
+				<img src="img/wechat-img-15.png" />
+				<i class="iconfont icon-sanjiaoshang sj"></i>
+			</div>
+		</div>
+		
+	</body>
+</html>
